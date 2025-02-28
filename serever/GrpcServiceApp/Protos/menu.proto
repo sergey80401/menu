@@ -1,0 +1,16 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "GrpcServiceApp";
+
+package menu;
+
+message Request { }
+
+message Reply {
+  string id = 1;
+  string title = 2;
+}
+
+service MenuViewer {
+  rpc ShowMenu (Request) returns (Reply);
+}
